@@ -2,15 +2,28 @@ import { CBadge } from "@coreui/react";
 import React from "react";
 import jne from "../../../assets/jne-logo.png";
 import { formatPrice } from "../../../lib/format-price";
-import { DetailsModal } from "./DetailsModal";
+import { DetailsModal } from "../_components/DetailsModal";
 
-export const TablePackageHistory = () => {
+export const TableNewProcessPackage = () => {
   return (
     <div className="my-3 shadow-sm ">
       <table className="table">
         <thead className="thead-light">
           <tr>
-            <th scope="col">No</th>
+            <th scope="col">
+              <div className="custom-control custom-checkbox">
+                <input
+                  type="checkbox"
+                  className="custom-control-input"
+                  id="selectAll"
+                  // checked
+                />
+                <label
+                  className="custom-control-label"
+                  htmlFor="selectAll"
+                ></label>
+              </div>
+            </th>
             <th scope="col">Transaksi</th>
             <th scope="col">Pengirim</th>
             <th scope="col">Penerima</th>
@@ -22,12 +35,20 @@ export const TablePackageHistory = () => {
         </thead>
         <tbody>
           <tr>
-            <th
-              scope="row"
-              // className="align-middle"
-            >
-              1
-            </th>
+            <td className="align-middle">
+              <div className="custom-control custom-checkbox">
+                <input
+                  type="checkbox"
+                  className="custom-control-input"
+                  id="customCheck1"
+                  // checked
+                />
+                <label
+                  className="custom-control-label"
+                  htmlFor="customCheck1"
+                ></label>
+              </div>
+            </td>
             <td className="align-middle">
               <CBadge color="primary"> Reguler</CBadge>
               <div className="font-weight-bold my-2 ">DID-7681440137</div>
